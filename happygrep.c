@@ -338,7 +338,7 @@ int parse_options(int argc, const char *argv[])
     return 0;
 }
 
-int main(int argc, const char *argv[])
+int target(int argc, const char *argv[])
 {
     const char *codeset = "UTF-8";
     /* c must be int not char, because the maximum value of KEY_RESIZE is 632. */
@@ -1067,3 +1067,9 @@ static void move_view(struct view *view, int lines)
     update_title_win(view);
 }
 
+int LLVMFuzzerTestOneInput(char* data, size_t size) {
+	char* args[1];
+	args[0] = data;
+	target(1, (const char**) args);
+	return 0;
+}

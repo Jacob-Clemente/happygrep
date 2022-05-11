@@ -1,0 +1,5 @@
+project: jacob-clemente/happygrep
+target: happygrep
+
+cmds:
+  - cmd: /happygrep
