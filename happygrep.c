@@ -1068,8 +1068,9 @@ static void move_view(struct view *view, int lines)
 }
 
 int LLVMFuzzerTestOneInput(char* data, size_t size) {
-	char* args[1];
-	args[0] = data;
-	target(1, (const char**) args);
+	char* args[2];
+	args[0] = "happygrep";
+	args[1] = data;
+	target(2, (const char**) args);
 	return 0;
 }
